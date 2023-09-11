@@ -38,6 +38,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 0rem;
+    flex-wrap: wrap;
 }
 
 .red1{
@@ -50,4 +51,14 @@
     user-select: none;
     cursor: pointer;
     font-weight: 600;
+}
+
+@media (max-width:767px){
+    .red img{
+        padding-left: 0px;
+    }
+    .red{
+        justify-content: center;
+        padding-block: 20px;
+    }
 }
