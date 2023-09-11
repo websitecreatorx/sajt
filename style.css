@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.red{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+}
+
+.red p{
+    margin-bottom: 0rem;
+    user-select: none;
+    cursor: pointer;
+    font-size: large;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    color: rgb(61, 61, 61);
+}
+
+.red img{
+    padding-left: 110px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.kont{
+    padding-block: 15px;
+}
+
+.ulist{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0rem;
+}
+
+.red1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ulist li{
+    user-select: none;
+    cursor: pointer;
+    font-weight: 600;
+}
