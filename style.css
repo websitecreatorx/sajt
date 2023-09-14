@@ -55,7 +55,7 @@
 
 .pozadina{
     background-image: url(slike/woman.jpg);
-    background-size: 1903px 115%;
+    background-size: 1903px 113%;
     background-position: center;
 }
 
@@ -95,7 +95,7 @@
 .pocetak{
     align-items: center;
     text-align: center;
-    height: 793px;
+    height: 870px;
 }
 
 .pocetak h1{
