@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 
 .red{
@@ -14,6 +14,38 @@
     padding-left: 110px;
     user-select: none;
     cursor: pointer;
+}
+
+.red3{
+    padding-block: 20px;
+    border-block: 3px solid rgba(128, 128, 128, 0);
+    background-color: rgba(240, 248, 255, 0);
+    position: fixed;
+    width: 100%;
+    transition: 0.5s;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.nevidljiv{
+    opacity: 0;
+}
+
+.vidljiv{
+    display: block;
+}
+
+.sivo{
+    background-color: rgba(128, 128, 128, 0.8);
+}
+
+.sivo1{
+    background-color: rgba(128, 128, 128, 0.9);
+    border-block: 3px solid rgba(128, 128, 128, 0.6);
 }
 
 .kont{
@@ -37,6 +69,10 @@
     justify-content: center;
 }
 
+.mnu{
+    padding-left: 0;
+}
+
 .ulist li{
     user-select: none;
     cursor: pointer;
@@ -55,20 +91,72 @@
 
 .pozadina{
     background-image: url(slike/woman.jpg);
-    background-size: 1903px 113%;
+    background-size: 100vw 115%;
     background-position: center;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+}
+
+@media (min-width:3839px){
+    .start{
+        padding-left: 40% !important;
+    }
+}
+
+@media (max-width:1920px){
+    .pozadina{
+        background-size: 1920px 115%;
+    }
+    
 }
 
 @media (max-width:1005px){
     .pozadina{
         background-position: left;
     }
+    .pocetak p{
+        text-align: center !important;
+    }
     .pocetak h1{
         font-weight: 600;
         font-size: 90px;
         padding-top: 200px;
-        padding-right: 0% !important;
+        text-align: center !important;
     }
+    .start{
+        align-items: center;
+        justify-content: center;
+        text-align: center !important;
+        padding-left: 0% !important;
+    }
+
+@media (max-width:767px){
+    .red2{
+        padding-left: 11%;
+        display: block !important;
+    }
+    .red1{
+        display: none;
+    }
+    .red{
+        gap: 130px;
+    }
+}
+
+@media (min-width:768px){
+    .red3{
+        display: none;
+    }
+}
+
+@media (max-width:360px){
+    .red{
+        gap: 50px;
+    }
+    .pocetak h1{
+        font-size: 80px !important;
+    }
+}
     
     .pocetak p{
         letter-spacing: 10px;
@@ -94,16 +182,20 @@
 
 .pocetak{
     align-items: center;
-    text-align: center;
-    height: 870px;
+    text-align: left;
+    height: 100vh;
+}
+
+.start{
+    padding-left: 25%;
 }
 
 .pocetak h1{
     font-weight: 600;
     font-size: 90px;
-    padding-right: 41%;
-    padding-top: 200px;
+    padding-top: 257px;
     color: black;
+    text-align: left;
 }
 
 .pocetak p{
@@ -111,9 +203,9 @@
     text-transform: uppercase;
     font-weight: 700;
     color: gray;
-    padding-right: 26%;
     padding-top: 30px;
     font-size: 12.5px;
+    text-align: left;
 }
 
 .pocetak button{
@@ -122,7 +214,37 @@
     font-weight: 600;
     padding-inline: 20px;
     border: 5px solid crimson;
-    margin-right: 54%;
     border-radius: 2px;
     margin-top: 70px;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(49, 49, 49);
+    margin: 5px;
+    transition: 0.5s;
+}
+
+.red2{
+    display: none;
+    max-width: min-content;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.anim .bar:nth-child(1){
+    transform: translate(6px, 5.5px);
+    rotate: 45deg;
+}
+
+.anim .bar:nth-child(2){
+    transform: translateX(40px);
+}
+
+.anim .bar:nth-child(3){
+    transform: translate(6px, -5px);
+    rotate: -45deg;
 }
