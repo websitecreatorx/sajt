@@ -248,3 +248,87 @@ header{
     transform: translate(6px, -5px);
     rotate: -45deg;
 }
+
+.naslov{
+    text-align: center;
+    padding-top: 100px;
+}
+
+.linija{
+    display: block;
+    width: 100px;
+    border: 1px solid crimson;
+    margin: auto;
+    margin-block: 24.5px;
+}
+
+.linija1{
+    height: 50px;
+}
+
+.podnaslov{
+    text-align: center;
+}
+
+.centar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 100px;
+    padding-top: 40px;
+}
+
+.break{
+    text-align: left;
+    color: gray;
+    max-width: 360px;
+}
+
+.centar .col-md-4{
+    width: max-content;
+}
+
+.read{
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    height: 25px;
+    cursor: pointer;
+}
+
+.strelica{
+    border: 1px solid crimson;
+    height: 8px;
+}
+
+.strelica:nth-child(2){
+    rotate: 45deg;
+    transform: translate(13px,6px);
+}
+.strelica:nth-child(3){
+    rotate: -45deg;
+    transform: translate(-11px,1px);
+}
+
+.naslov1{
+    padding-block: 10px;
+    font-weight: 600;
+}
+
+.read p{
+    font-weight: 600;
+}
+
+@media (max-width:1120px) {
+    .centar{
+        display: grid;
+    }
+}
+
+@media (max-width:360px) {
+    .lijevo{
+        width: 300px !important;
+    }
+}
+
