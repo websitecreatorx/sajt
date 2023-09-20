@@ -29,6 +29,7 @@ header{
     position: fixed;
     width: 100%;
     transition: 0.5s;
+    z-index: 1;
 }
 
 .nevidljiv{
@@ -374,7 +375,6 @@ header{
 
 .crvenicont{
     max-width: 100%;
-    max-height: 440px;
 }
 
 .crvenaslika{
@@ -418,4 +418,108 @@ header{
     .crvenidivsve{
         margin-top: -80px;
     }
+}
+
+.expcont{
+    background-color: rgb(68, 68, 68);
+    max-width: 100%;
+    padding-block: 100px;
+    height: 927px;
+}
+
+.exp{
+    color: white;
+    text-align: center;
+}
+
+.exprow{
+    align-items: center;
+    justify-content: center;
+}
+
+.expsve{
+    margin-top: 40px;
+}
+
+.expcont1{
+    background-color: rgb(68, 68, 68);
+}
+
+.expnaslov{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 170px;
+    width: max-content;
+}
+.expnaslov h5{
+    height: min-content;
+}
+
+.linetacka{
+    margin-bottom: 20px;
+    max-width: max-content;
+}
+
+.line{
+    display: block;
+    height: 650px;
+    width: 2px;
+    background-color: rgb(75, 75, 75);
+    margin-left: 2.5px;
+    position: absolute;
+}
+
+.tacka{
+    display: block;
+    background-color: crimson;
+    height: 2px;
+    width: 2px;
+    border: 3px solid crimson;
+    border-radius: 10px;
+    margin-bottom: 195px;
+    position: relative;
+    margin-left: 1px;
+}
+
+.t1{
+    margin-top: 20px;
+}
+
+.expsve{
+    display: flex;
+    justify-content: center;
+}
+
+.exptext{
+    margin-left: 2.5%;
+}
+
+.text{
+    margin-bottom: 60px;
+    color: white;
+}
+
+.top{
+    width: 56vw;
+    text-align: right;
+    transition: 0.25s;
+}
+
+.nedugme{
+    opacity: 0;
+}
+.dugme{
+    opacity: 100;
+}
+
+.top button{
+    top: 95%;
+    right: 3%;
+    position: fixed;
+    width: 27.5px;
+    height: 30px;
+    background-color: crimson;
+    border: 2px solid crimson;
+    color: white;
 }
