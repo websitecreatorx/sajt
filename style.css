@@ -424,7 +424,7 @@ header{
     background-color: rgb(68, 68, 68);
     max-width: 100%;
     padding-block: 100px;
-    height: 927px;
+    height: 100%;
 }
 
 .exp{
@@ -479,7 +479,7 @@ header{
     border-radius: 10px;
     margin-bottom: 195px;
     position: relative;
-    margin-left: 1px;
+    margin-left: 0.7px;
 }
 
 .t1{
@@ -522,4 +522,100 @@ header{
     background-color: crimson;
     border: 2px solid crimson;
     color: white;
+    z-index: 1;
+}
+
+.latest{
+    text-align: center;
+    padding-top: 50px;;
+}
+
+.visiblecards{
+    display: flex;
+    width: 225%;
+}
+
+.wrapper{
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    margin-bottom: 50px;
+    size: 100%;
+}
+
+.card{
+    display: flex;
+    height: 25vw;
+    width: 475.75px;
+    border-radius: 0px;
+    border-width: 0px;
+    text-align: center;
+    justify-content: end;
+    color: white;
+} 
+
+.card p{
+    font-size: 1.75vw;
+    padding-bottom: 4vw;
+}
+
+.c1{
+    background-image: url(slike/6.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 50%;
+}
+
+.c2{
+    background-image: url(slike/4.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 50%;
+}
+
+.c3{
+    background-image: url(slike/5.jpg);  
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 50%;
+}
+
+.c4{
+    background-image: url(slike/2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 50%;
+}
+
+.c5{
+    background-image: url(slike/1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 50%;
+}
+
+.c6{
+    background-image: url(slike/3.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 50%;
+}
+.c7{
+    background-image: url(slike/7.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 50%;
+}
+
+.c8{
+    background-image: url(slike/8.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 50%;
+}
+
+.c9{
+    background-image: url(slike/9.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 50%;
 }
