@@ -536,7 +536,10 @@ header{
 }
 
 .wrapper{
+    scrollbar-width: none;
     overflow-x: scroll;
+    pointer-events: none;
+    user-select: none;
     scroll-behavior: smooth;
     margin-bottom: 50px;
     size: 100%;
@@ -545,7 +548,7 @@ header{
 .card{
     display: flex;
     height: 25vw;
-    width: 475.75px;
+    width: 3000vw;
     border-radius: 0px;
     border-width: 0px;
     text-align: center;

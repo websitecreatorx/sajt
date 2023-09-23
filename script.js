@@ -1,13 +1,21 @@
-const red2 = document.querySelector('.red2');
-const sivo = document.querySelector('header');
+const red2 = document.querySelector('.red2')
+const sivo = document.querySelector('header')
 const sivo1 = document.querySelector('.red3')
 const Top = document.querySelector('.top')
+const scrollableElement = document.querySelector('.wrapper')
+const visina = document.querySelector('.crvenastrelica')
+const crveno = document.querySelector('.crvenirow')
+
+window.addEventListener('load', function(){
+    setTimeout(scrollback, 0)
+})
 
 red2.addEventListener('click', function(){
     red2.classList.toggle('anim');
     sivo1.classList.toggle('vidljiv')
     sivo1.classList.toggle('nevidljiv')
 })
+
 
 
 window.addEventListener('scroll', function()  {
@@ -20,8 +28,13 @@ window.addEventListener('scroll', function()  {
     }
 });
 
+const crvenirow1 = crveno.offsetHeight/30
+const elementHeight = visina.offsetHeight
+const oboje = crvenirow1 + elementHeight
+console.log(oboje)
+
 window.addEventListener('scroll', function()  {
-    if (window.pageYOffset > 2036){
+    if (window.pageYOffset > oboje){
         Top.classList.add('dugme')
         Top.classList.remove('nedugme')
     }else{
@@ -38,4 +51,27 @@ window.addEventListener('scroll', function()  {
         }    
     }
 });
+
+const scrollBack = -10000;
+const scrollAmount = scrollableElement.offsetWidth;
+const intervalTime = 3000;
+myinterval = setInterval(scrollAmount, intervalTime)
+
+function scroll(){
+    scrollableElement.scrollBy(scrollAmount, myinterval);
+}
+
+function scrollback(){
+    scrollableElement.scrollLeft = scrollBack;
+}
+    
+
+scrollableElement.addEventListener('scroll', function(){
+    if(scrollableElement.scrollLeft === scrollableElement.scrollWidth - scrollableElement.clientWidth){
+        setTimeout(scrollback, 3000)
+    }})
+
+
+
+const interval = setInterval(scroll, 3000);
 
