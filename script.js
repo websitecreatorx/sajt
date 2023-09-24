@@ -1,3 +1,4 @@
+const worker = new Worker('script.js');
 const red2 = document.querySelector('.red2')
 const sivo = document.querySelector('header')
 const sivo1 = document.querySelector('.red3')
@@ -55,21 +56,23 @@ window.addEventListener('scroll', function()  {
 const scrollBack = -10000;
 const intervalTime = 3000;
 myinterval = setInterval(scroll, intervalTime)
+let scrollAmount = scrollableElement.offsetWidth
 
 function scroll(){
-    const scrollAmount = scrollableElement.offsetWidth;
     scrollableElement.scrollBy(scrollAmount, myinterval);
 }
 
 function scrollback(){
     scrollableElement.scrollLeft = scrollBack;
 }
-    
 
 scrollableElement.addEventListener('scroll', function(){
-    if(scrollableElement.scrollLeft === scrollableElement.scrollWidth - scrollableElement.clientWidth){
+    if(scrollableElement.scrollLeft > scrollAmount + scrollAmount/4){
         setTimeout(scrollback, 3000)
+        clearInterval(myinterval)
 }})
 
-const interval = setInterval(scroll, 3000);
-
+scrollableElement.addEventListener('scroll', function(){
+    if(scrollableElement.scrollLeft === 0){
+        myinterval = setInterval(scroll, intervalTime)
+}})
