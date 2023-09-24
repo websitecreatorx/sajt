@@ -696,6 +696,9 @@ header{
 }
 
 @media (max-width:1552px){
+    .dots{
+        display: none;
+    }
     .card1{
         height: max-content;
         width: 50vw;
