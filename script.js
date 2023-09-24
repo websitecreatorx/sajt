@@ -31,7 +31,7 @@ window.addEventListener('scroll', function()  {
 const crvenirow1 = crveno.offsetHeight/30
 const elementHeight = visina.offsetHeight
 const oboje = crvenirow1 + elementHeight
-console.log(oboje)
+
 
 window.addEventListener('scroll', function()  {
     if (window.pageYOffset > oboje){
@@ -53,11 +53,11 @@ window.addEventListener('scroll', function()  {
 });
 
 const scrollBack = -10000;
-const scrollAmount = scrollableElement.offsetWidth;
 const intervalTime = 3000;
-myinterval = setInterval(scrollAmount, intervalTime)
+myinterval = setInterval(scroll, intervalTime)
 
 function scroll(){
+    const scrollAmount = scrollableElement.offsetWidth;
     scrollableElement.scrollBy(scrollAmount, myinterval);
 }
 
@@ -69,9 +69,7 @@ function scrollback(){
 scrollableElement.addEventListener('scroll', function(){
     if(scrollableElement.scrollLeft === scrollableElement.scrollWidth - scrollableElement.clientWidth){
         setTimeout(scrollback, 3000)
-    }})
-
-
+}})
 
 const interval = setInterval(scroll, 3000);
 
