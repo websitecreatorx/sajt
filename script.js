@@ -1,4 +1,3 @@
-const worker = new Worker('script.js');
 const red2 = document.querySelector('.red2')
 const sivo = document.querySelector('header')
 const sivo1 = document.querySelector('.red3')
