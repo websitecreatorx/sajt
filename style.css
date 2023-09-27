@@ -142,6 +142,13 @@ header{
     .red{
         gap: 130px;
     }
+    .servicesbtn{
+        text-align: center !important;
+        padding-top: 25px !important;
+    }
+    .servicesh5{
+        padding-bottom: 25px !important;
+    }
 }
 
 @media (min-width:768px){
@@ -726,5 +733,100 @@ header{
         width: 100%;
         margin-left: 0vw !important;
         justify-content: center;
+    }
+}
+
+.servicesh5{
+    display: grid;
+    padding-block: 50px;
+    text-align: center;
+    align-items: center;
+}
+
+.servicesh5 h5{
+    margin-bottom: 0rem;
+    color: white;
+    font-weight: bold;
+}
+
+.servicesbtn{
+    padding-block: 50px;
+    text-align: right;
+}
+
+.servicesbtn button{
+    padding-inline: 20px;
+    padding-block: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    border: 2px solid white;
+    color: white;
+    font-weight: 600;
+}
+
+.servicesrow{
+    width: 100%;
+}
+
+.servicescard{
+    color: white;
+    padding-inline: 2.95%;
+    padding-block: 60px;
+}
+
+.servicescard p{
+    padding-block: 10px;
+}
+
+.servicescont{
+    margin-inline: 0;
+    max-width: 100vw;
+    padding-inline: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.servicesbtnread{
+    background-color: rgb(255, 78, 78);
+    color: white;
+    font-weight: 600;
+    padding-inline: 20px;
+    border: 5px solid rgb(255, 78, 78);
+    border-radius: 3px;
+}
+
+.servicescard:nth-child(1){
+    background-image: url(slike/8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgb(105, 105, 105);
+}
+
+.servicescard:nth-child(2){
+    background-image: url(slike/5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgb(105, 105, 105);
+}
+
+.servicescard:nth-child(3){
+    background-image: url(slike/3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgb(105, 105, 105);
+}
+
+@media (max-width:1084px){
+    .servicesrow{
+        flex-direction: column;
+        min-width: 320px;
+        width: 60vw;
+    }
+    .servicescard{
+        width: 100%;
     }
 }
