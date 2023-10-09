@@ -706,6 +706,8 @@ header{
     overflow-x: scroll;
     scrollbar-width: none;
     scroll-behavior: smooth;
+    pointer-events: none;
+    user-select: none;
 }
 
 .peoplesaycont{
