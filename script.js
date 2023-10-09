@@ -4,10 +4,15 @@ const sivo1 = document.querySelector('.red3')
 const Top = document.querySelector('.top')
 const scrollableElement = document.querySelector('.visiblecards')
 const scrollableElement1 = document.querySelector('.visiblecards1')
+const scrollableElement2 = document.querySelector('.peoplesayvisiblecards')
+const scrollableElement2Visible = document.querySelector('.peoplesayp')
 const visina = document.querySelector('.crvenastrelica')
 const crveno = document.querySelector('.crvenirow')
 const dot1 = document.querySelector('.dot1')
 const dot2 = document.querySelector('.dot2')
+const dott1 = document.querySelector('.dott1')
+const dott2 = document.querySelector('.dott2')
+const dott3 = document.querySelector('.dott3')
 
 window.addEventListener('load', function(){
     setTimeout(scrollback, 0)
@@ -58,7 +63,7 @@ window.addEventListener('scroll', function()  {
 const scrollBack = -10000;
 const intervalTime = 3000;
 myinterval = setInterval(scroll, intervalTime)
-let scrollAmount = scrollableElement.offsetWidth
+let scrollAmount = scrollableElement.offsetWidth - 1
 
 function scroll(){
     scrollableElement.scrollBy(scrollAmount, myinterval);
@@ -69,7 +74,7 @@ function scrollback(){
 }
 
 scrollableElement.addEventListener('scroll', function(){
-    if(scrollableElement.scrollLeft > scrollAmount + scrollAmount/4){
+    if(scrollableElement.scrollLeft > scrollAmount){
         setTimeout(scrollback, 3000)
         clearInterval(myinterval)
 }})
@@ -122,3 +127,78 @@ dot2.addEventListener('click', function(){
     clearTimeout(timeout)   
     myinterval1 = setInterval(scroll1, 0)
 })
+
+dott1.addEventListener('click', function(){
+    clearInterval(myinterval2)
+    dott1.classList.add('activedot1')
+    dott2.classList.remove('activedot1')
+    dott3.classList.remove('activedot1')
+    counter = 0
+    scrollableElement2.scrollTo(scrollBy1*0, 0)
+    clearTimeout(timeout1)
+    myinterval2 = setInterval(scrollAmount2, 3000)
+})
+
+dott2.addEventListener('click', function(){
+    clearInterval(myinterval2)
+    dott1.classList.remove('activedot1')
+    dott2.classList.add('activedot1')
+    dott3.classList.remove('activedot1')
+    counter = 1
+    scrollableElement2.scrollTo(scrollBy1, 0)
+    clearTimeout(timeout1)
+    myinterval2 = setInterval(scrollAmount2, 3000)   
+})
+
+dott3.addEventListener('click', function(){
+    clearInterval(myinterval2)  
+    dott1.classList.remove('activedot1')
+    dott2.classList.remove('activedot1')
+    dott3.classList.add('activedot1')
+    counter = 2
+    scrollableElement2.scrollTo(scrollBy1*2, 0)
+    clearTimeout(timeout1) 
+    myinterval2 = setInterval(scrollAmount2, 3000)    
+})
+
+window.addEventListener('load', function(){
+    scrollableElement2.scrollBy(scrollBack, 0)
+    dott1.classList.add('activedot1')
+})
+
+let counter = 0
+const scrollBy1 = scrollableElement2Visible.offsetWidth
+
+function scrollAmount2(){
+    scrollableElement2.scrollBy(scrollBy1, 3000)
+    counter++
+    console.log(counter)
+}
+
+function scrollBack2(){
+    scrollableElement2.scrollBy(scrollBack, 3000)
+    counter = 0
+    console.log(counter)
+}
+
+scrollableElement2.addEventListener('scroll', function(){
+    if(counter === 0){
+        dott1.classList.add('activedot1')
+        dott2.classList.remove('activedot1')
+        dott3.classList.remove('activedot1')
+    }
+    if(counter === 1){
+        dott1.classList.remove('activedot1')
+        dott2.classList.add('activedot1')
+        dott3.classList.remove('activedot1')
+    }
+    if(counter === 2){
+        dott1.classList.remove('activedot1')
+        dott2.classList.remove('activedot1')
+        dott3.classList.add('activedot1')
+        clearTimeout(timeout1) 
+        timeout1 = setTimeout(scrollBack2, 3000)
+    }
+})
+timeout1 = setTimeout(scrollBack2, 0)
+myinterval2 = setInterval(scrollAmount2, 3000)
