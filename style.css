@@ -728,10 +728,105 @@ header{
     transition: all 0.2s;
 }
 
+.numberscont{
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+    background-color: rgb(255, 72, 72);
+}
+
+.numbersrow{
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 
 
+.numbersrow p{
+    margin-bottom: 0;
+}
+
+.numbersrow .col-md-2{
+    margin-block: 2vw;
+}
+
+.inforow{
+    justify-content: center;
+    align-items: center;
+    padding-block: 100px;
+    gap: 10vw;
+}
+
+.infocol{
+    width: fit-content;
+}
+
+.infocol div{
+    height: 150px;
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    border: 6px solid rgba(128, 128, 128, 0.199);
+}
+
+.infocol p:nth-child(3){
+    width: 190px;
+    height: 100%;
+    max-height: 48px;
+    margin-left: -25px;
+}
+
+.inforow img{
+    padding-bottom: 1vw;
+}
+
+.pozadina1{
+    background-image: url(slike/plaza.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+
+.endcont{
+    margin-inline: 0;
+    background-color: rgb(44, 44, 44);
+    width: 100%;
+    max-width: 100%;
+}
+
+.endrow{
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+}
+
+.endrow .col-md-3{
+    margin-block: 2vw;
+    max-width: 320px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.endrow .col-md-3:nth-child(2) img{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.endrow .col-md-3:nth-child(2){
+    display: flex;
+    gap: 20px;
+}
 
 
+@media (min-width:1240px){
+    .endrow .col-md-3:nth-child(3) p{
+        white-space: nowrap;
+    }
+}
 
 
 @media (max-width:1084px){

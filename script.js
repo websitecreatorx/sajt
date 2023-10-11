@@ -172,13 +172,11 @@ const scrollBy1 = scrollableElement2Visible.offsetWidth
 function scrollAmount2(){
     scrollableElement2.scrollBy(scrollBy1, 3000)
     counter++
-    console.log(counter)
 }
 
 function scrollBack2(){
     scrollableElement2.scrollBy(scrollBack, 3000)
     counter = 0
-    console.log(counter)
 }
 
 scrollableElement2.addEventListener('scroll', function(){
